@@ -1,0 +1,4 @@
+https://proandroiddev.com/dagger-2-annotations-binds-contributesandroidinjector-a09e6a57758f
+https://github.com/ragdroid/Dahaka
+https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger
+https://github.com/MindorksOpenSource/android-mvp-architecture
