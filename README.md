@@ -3,6 +3,7 @@
 ### Project Created by references :
 https://proandroiddev.com/dagger-2-annotations-binds-contributesandroidinjector-a09e6a57758f
 https://github.com/ragdroid/Dahaka
+https://github.com/ribot/android-boilerplate
 https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger
 https://github.com/MindorksOpenSource/android-mvp-architecture
 
@@ -19,13 +20,13 @@ https://github.com/MindorksOpenSource/android-mvp-architecture
 
 This will run all the code analysis tools in the following order:
 
-![](https://raw.githubusercontent.com/kal72/android-mvp-template/master/raw/build.gradlecheck.png)
+![](https://github.com/kal72/android-mvp-template/blob/master/raw/check.png)
 
 The following code analysis tools are set up on this project:
 
 before that, rebuild the project first
 
-[Checkstyle](http://checkstyle.sourceforge.net/): It ensures that the code style follows [our Android code guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md#2-code-guidelines).
+[Checkstyle](http://checkstyle.sourceforge.net/): It ensures that the code styles.
 
 ```
 ./gradlew checkstyle
