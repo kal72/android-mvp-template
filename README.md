@@ -19,7 +19,7 @@ https://github.com/MindorksOpenSource/android-mvp-architecture
 
 This will run all the code analysis tools in the following order:
 
-![](https://gitlab.ainosi.co.id/custom-payment-integration/eret-pasar-semarang/android-eretribusi/raw/master/check.png)
+![](https://raw.githubusercontent.com/kal72/android-mvp-template/master/raw/build.gradlecheck.png)
 
 The following code analysis tools are set up on this project:
 
