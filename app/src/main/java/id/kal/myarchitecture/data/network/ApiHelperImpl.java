@@ -6,6 +6,7 @@ import javax.inject.Singleton;
 import id.kal.myarchitecture.data.network.config.ApiConfig;
 import id.kal.myarchitecture.data.network.config.ApiHeader;
 import id.kal.myarchitecture.data.network.service.HelloApiService;
+import id.kal.myarchitecture.utils.Logger;
 
 /**
  * Contributor Kristiawan Adi L on 21/12/18.
@@ -18,8 +19,12 @@ public class ApiHelperImpl implements ApiHelper {
     private HelloApiService helloApiService;
 
     @Inject
-    public ApiHelperImpl(ApiConfig apiConfig, HelloApiService helloApiService) {
+    public ApiHelperImpl(ApiConfig apiConfig) {
         this.apiConfig = apiConfig;
+    }
+
+    @Inject
+    public void setHelloApiService(HelloApiService helloApiService) {
         this.helloApiService = helloApiService;
     }
 
@@ -30,6 +35,9 @@ public class ApiHelperImpl implements ApiHelper {
 
     @Override
     public HelloApiService getHelloApiService() {
+        if (helloApiService == null)
+        Logger.d(this, "null");
+
         return helloApiService;
     }
 }

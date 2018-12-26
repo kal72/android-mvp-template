@@ -6,7 +6,7 @@ import javax.inject.Singleton;
 import id.kal.myarchitecture.data.network.config.ApiConfig;
 import id.kal.myarchitecture.data.network.config.ApiEndPoint;
 import id.kal.myarchitecture.data.network.model.Hello;
-import id.kal.myarchitecture.data.network.model.base.BaseResponseObject;
+import id.kal.myarchitecture.data.network.model.BaseResponseObject;
 import io.reactivex.Observable;
 
 /**

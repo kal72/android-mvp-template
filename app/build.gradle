@@ -10,6 +10,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -18,7 +19,6 @@ android {
     }
 
     testOptions {
-        unitTests.includeAndroidResources = true
         unitTests.returnDefaultValues = true
     }
 
@@ -31,19 +31,21 @@ android {
         development {
             applicationId "id.kal.myarchitecture"
             buildConfigField "String", "PROFILE_NAME", '"DEVELOPMENT"'
-            buildConfigField "String", "BASE_API", '"http://192.168.0.104:9090"'
+            buildConfigField "String", "BASE_API", '"http://10.227.5.38:9090"'
             buildConfigField "String", "HELLO_API", '"/hello"'
         }
 
         production {
             applicationId "id.kal.myarchitecture"
             buildConfigField "String", "PROFILE_NAME", '"PRODUCTION"'
-            buildConfigField "String", "BASE_API", '"https://127.0.0.1:9090/"'
+            buildConfigField "String", "BASE_API", '"http://10.227.5.38:9090"'
+            buildConfigField "String", "HELLO_API", '"/hello"'
         }
     }
+
     compileOptions {
-        sourceCompatibility = '1.8'
-        targetCompatibility = '1.8'
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
@@ -70,13 +72,11 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
 
-    //model helper
-    compileOnly 'org.projectlombok:lombok:1.18.4'
-    annotationProcessor 'org.projectlombok:lombok:1.18.4'
-
     //reactive
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
+
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'androidx.test:core:1.0.0'

@@ -8,5 +8,5 @@ import id.kal.myarchitecture.data.network.service.BaseService;
  */
 public interface ApiHelper extends BaseService {
 
-   ApiHeader getApiHeader();
+    ApiHeader getApiHeader();
 }

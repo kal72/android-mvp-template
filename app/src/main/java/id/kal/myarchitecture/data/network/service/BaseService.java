@@ -6,5 +6,7 @@ package id.kal.myarchitecture.data.network.service;
  */
 public interface BaseService {
 
+    void setHelloApiService(HelloApiService helloApiService);
+
     HelloApiService getHelloApiService();
 }

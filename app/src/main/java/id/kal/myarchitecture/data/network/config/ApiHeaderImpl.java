@@ -11,6 +11,7 @@ public class ApiHeaderImpl implements ApiHeader{
 
     @Inject
     public ApiHeaderImpl() {
+        token = "";
     }
 
     @Override

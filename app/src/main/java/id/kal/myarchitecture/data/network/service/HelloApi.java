@@ -1,7 +1,7 @@
 package id.kal.myarchitecture.data.network.service;
 
 import id.kal.myarchitecture.data.network.model.Hello;
-import id.kal.myarchitecture.data.network.model.base.BaseResponseObject;
+import id.kal.myarchitecture.data.network.model.BaseResponseObject;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

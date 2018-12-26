@@ -17,7 +17,7 @@ import id.kal.myarchitecture.data.network.config.ApiHeaderImpl;
 import id.kal.myarchitecture.data.pref.SharedPreferencesHelperImpl;
 import id.kal.myarchitecture.data.pref.SharedPreferencesHelper;
 import id.kal.myarchitecture.di.PreferenceInfo;
-import id.kal.myarchitecture.utils.AppConstants;
+import id.kal.myarchitecture.utils.Constants;
 
 /**
  * Contributor Kristiawan Adi L on 16/12/18.
@@ -47,6 +47,6 @@ public abstract class AppModule {
     @Provides
     @PreferenceInfo
     static String providePreferenceName() {
-        return AppConstants.PREF_NAME;
+        return Constants.PREF_NAME;
     }
 }

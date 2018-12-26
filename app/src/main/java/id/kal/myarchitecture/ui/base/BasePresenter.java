@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import id.kal.myarchitecture.data.DataManager;
 import id.kal.myarchitecture.exception.MvpViewNotAttachedException;
+import io.reactivex.disposables.Disposable;
 
 /**
  * Contributor Kristiawan Adi L on 15/12/18.
@@ -11,6 +12,7 @@ import id.kal.myarchitecture.exception.MvpViewNotAttachedException;
 public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
 
     private final DataManager dataManager;
+    protected Disposable rxDisposable;
 
     @Inject
     public BasePresenter(DataManager dataManager) {
@@ -27,13 +29,16 @@ public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
     @Override
     public void detachView() {
         mMvpView = null;
+        if (rxDisposable != null) {
+            rxDisposable.dispose();
+        }
     }
 
     private boolean isViewAttached() {
         return mMvpView != null;
     }
 
-    public T getMvpView() {
+    protected T getView() {
         checkViewAttached();
         return mMvpView;
     }
@@ -42,7 +47,7 @@ public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
         if (!isViewAttached()) throw new MvpViewNotAttachedException();
     }
 
-    public DataManager getDataManager() {
+    protected DataManager getDataManager() {
         return dataManager;
     }
 }
